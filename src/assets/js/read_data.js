@@ -52,7 +52,7 @@ function display_data() {
   
   $.ajax({
     type: 'POST',
-    url: 'https://job-app-be.herokuapp.com/get_file',
+    url: 'https://job-app-be1.herokuapp.com/get_file',
     data: {f_name: window.path, start: window.start},
     cache: false,
     success: function(resp){
@@ -115,6 +115,7 @@ function display_data() {
                   var a_tag = document.createElement('a');
                   a_tag.className = "btn btn-primary";
                   a_tag.href = jdata[i]['link'];
+                  a_tag.target="_blank";
                   a_tag.textContent = "Apply";
                   summary_tag.appendChild(document.createElement('br'))
                   summary_tag.appendChild(document.createElement('br'))
@@ -240,7 +241,7 @@ function search_job(){
     }
     $.ajax({
       type: 'POST',
-      url: 'https://job-app-be.herokuapp.com/search_data',
+      url: 'https://job-app-be1.herokuapp.com/search_data',
       data: data,
       cache: false,
       success: function(resp){
