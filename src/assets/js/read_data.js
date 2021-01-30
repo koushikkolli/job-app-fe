@@ -52,7 +52,7 @@ function display_data() {
   
   $.ajax({
     type: 'POST',
-    url: 'http://127.0.0.1:5000/get_file',
+    url: 'https://job-app-be.herokuapp.com/get_file',
     data: {f_name: window.path, start: window.start},
     cache: false,
     success: function(resp){
@@ -240,7 +240,7 @@ function search_job(){
     }
     $.ajax({
       type: 'POST',
-      url: 'http://127.0.0.1:5000/search_data',
+      url: 'https://job-app-be.herokuapp.com/search_data',
       data: data,
       cache: false,
       success: function(resp){
